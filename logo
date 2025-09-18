@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Logo Kabupaten Simeulue - Demo</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; display:flex; align-items:center; justify-content:center; height:100vh; background:#f5f7fb; margin:0; }
+  .card { background:white; padding:28px; border-radius:12px; box-shadow:0 8px 28px rgba(20,30,50,0.08); }
+  .logo { width:320px; height:320px; display:block; }
+  .caption { text-align:center; margin-top:10px; color:#334155; font-weight:600; letter-spacing:0.06em; }
+  /* optional responsive */
+  @media (max-width:420px){ .logo{ width:220px; height:220px } }
+</style>
+</head>
+<body>
+  <div class="card">
+    <!-- Inline SVG logo -->
+    <svg class="logo" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Kabupaten Simeulue">
+      <!-- background circle -->
+      <defs>
+        <linearGradient id="seaGrad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#2E9AFE"/>
+          <stop offset="1" stop-color="#1B6FCE"/>
+        </linearGradient>
+        <linearGradient id="landGrad" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#78C267"/>
+          <stop offset="1" stop-color="#2F9A3E"/>
+        </linearGradient>
+      </defs>
+
+      <!-- outer circle -->
+      <circle cx="300" cy="300" r="290" fill="#ffffff" stroke="#e6eefc" stroke-width="12"/>
+
+      <!-- emblem circle (blue sea) -->
+      <circle cx="300" cy="260" r="200" fill="url(#seaGrad)"/>
+
+      <!-- stylized island (green) -->
+      <path d="M160 320 C180 230, 250 200, 300 210 C350 220, 420 260, 440 330 C420 360, 360 380, 300 370 C240 360, 190 350, 160 320 Z"
+            fill="url(#landGrad)" stroke="#1f6f34" stroke-width="3" />
+
+      <!-- small mountain/volcano -->
+      <path d="M280 255 L300 210 L320 255 Z" fill="#1f6f34" opacity="0.95" />
+      <path d="M292 245 C296 237, 304 237, 308 245 L300 232 Z" fill="#f5d389" opacity="0.9" />
+
+      <!-- coconut / palm tree (simple) -->
+      <!-- trunk -->
+      <path d="M360 230 C362 260, 356 290, 350 320" stroke="#6b3f17" stroke-width="10" stroke-linecap="round" fill="none" />
+      <!-- fronds -->
+      <path d="M355 220 C380 210, 410 200, 430 190" stroke="#2f9a3e" stroke-width="8" stroke-linecap="round" fill="none" />
+      <path d="M355 225 C370 200, 395 190, 410 175" stroke="#2f9a3e" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M358 235 C375 235, 405 235, 430 235" stroke="#2f9a3e" stroke-width="7" stroke-linecap="round" fill="none" />
+      <circle cx="358" cy="222" r="6" fill="#8b5a2b" />
+
+      <!-- stylized waves in front (white) -->
+      <g transform="translate(0,40)">
+        <path d="M90 375 C140 350, 200 350, 260 375 C320 400, 380 400, 460 375 L460 410 L90 410 Z"
+              fill="#ffffff" opacity="0.9"/>
+        <path d="M110 390 C155 370, 220 370, 275 390 C330 410, 395 410, 440 390 L440 410 L110 410 Z"
+              fill="#ffffff" opacity="0.75"/>
+      </g>
+
+      <!-- ribbon / banner -->
+      <g transform="translate(0,0)">
+        <path d="M120 430 C180 470, 420 470, 480 430 L470 456 C420 486, 180 486,130 456 Z"
+              fill="#F9D66E" stroke="#D9B24A" stroke-width="4"/>
+        <!-- ribbon tail left -->
+        <path d="M120 430 L100 448 L120 456 Z" fill="#E4B84A" />
+        <!-- ribbon tail right -->
+        <path d="M480 430 L500 448 L480 456 Z" fill="#E4B84A" />
+        <!-- text -->
+        <text x="300" y="455" text-anchor="middle" font-family="Segoe UI, Roboto, Arial" font-weight="700"
+              font-size="36" fill="#17324a" style="letter-spacing:4px">SIMEULUE</text>
+      </g>
+
+      <!-- city name under circle (small) -->
+      <text x="300" y="560" text-anchor="middle" font-family="Segoe UI, Roboto, Arial"
+            font-size="20" fill="#334155">Kabupaten Simeulue</text>
+    </svg>
+
+    <div class="caption">Logo konsep — Kabupaten Simeulue</div>
+  </div>
+</body>
+</html>
